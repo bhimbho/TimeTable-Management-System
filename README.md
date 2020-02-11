@@ -1,4 +1,4 @@
-#TImeTable Management System
+# TImeTable Management System
 
 This is a basic timetable manaement system created in PHP,
 
