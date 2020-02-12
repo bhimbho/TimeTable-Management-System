@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 11, 2020 at 03:31 PM
+-- Generation Time: Feb 12, 2020 at 05:07 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.3.1
 
@@ -310,7 +310,7 @@ INSERT INTO `lecturer` (`lecturer_id`, `lecturer_firstname`, `lecturer_lastname`
 DROP TABLE IF EXISTS `level`;
 CREATE TABLE IF NOT EXISTS `level` (
   `level_id` int(11) NOT NULL AUTO_INCREMENT,
-  `level` int(11) NOT NULL,
+  `level` varchar(150) NOT NULL,
   PRIMARY KEY (`level_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
@@ -319,10 +319,10 @@ CREATE TABLE IF NOT EXISTS `level` (
 --
 
 INSERT INTO `level` (`level_id`, `level`) VALUES
-(1, 100),
-(2, 200),
-(3, 300),
-(4, 400);
+(1, 'ND I'),
+(2, 'ND II'),
+(3, 'HND I'),
+(4, 'HND II');
 
 -- --------------------------------------------------------
 
