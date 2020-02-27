@@ -70,6 +70,11 @@ class course extends db
         return $query->execute([$course_id]);
     }
 
+    public function unassigned_course($course_id)
+    {
+        $query=PARENT::p("DELETE FROM `assigned_course` WHERE assigned_id=?");
+        return $query->execute([$course_id]);
+    }
    
     
 }

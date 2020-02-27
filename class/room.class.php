@@ -39,7 +39,7 @@ class room extends db
     public function del_room($room_id)
     {
         $query=PARENT::p("DELETE FROM `rooms` WHERE `room_id`=?");
-        return $query->execute([$session_id]);
+        return $query->execute([$room_id]);
     }
 
    

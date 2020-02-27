@@ -24,8 +24,8 @@ class time extends db
     
     public function del_time($time_id)
     {
-        $query=PARENT::p("DELETE FROM `time` WHERE `room_id`=?");
-        return $query->execute([$session_id]);
+        $query=PARENT::p("DELETE FROM `time` WHERE `time_id`=?");
+        return $query->execute([$time_id]);
     }
 
     public function list_day()
@@ -81,6 +81,12 @@ class time extends db
             WHERE `course`.`dept_id`=? AND session_id=? AND `alloc_slots`.semester_id=? AND `course`.level_id=? AND `alloc_slots`.time_id=? AND `alloc_slots`.day_id=?");
         $query->execute([$dept,$session,$semester,$level,$time,$day]);
         return $query->fetch(PDO::FETCH_OBJ);
+    }
+    public function del_schedule($alloc_id)
+    {
+        // echo $day;
+        $query=PARENT::p("DELETE FROM `alloc_slots` WHERE `alloc_id`=?");
+        return $query->execute([$alloc_id]);
     }
     
 }

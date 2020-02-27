@@ -115,7 +115,7 @@ include "includes/sidebar.php";
                                         <td><?php echo $list_assigned_course->course_title?></td>
                                         <td><?php echo $list_assigned_course->course_unit?></td>
                                         <td><?php echo $list_assigned_course->lecturer_firstname.' '.$list_assigned_course->lecturer_lastname?></td>
-                                        <td><a href="unassign_course.php?id=<?php echo $list_assigned_course->assigned_id?>" class="btn btn-success"><i class="fa fa-times"></i> Unassign</a></td>
+                                        <td><a href="includes/unassign_course.php?id=<?php echo $list_assigned_course->assigned_id?>" class="btn btn-success"><i class="fa fa-times"></i> Unassign</a></td>
                                     </tr>
                                 <?php }?>
                                 </tbody>

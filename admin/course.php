@@ -131,7 +131,7 @@ include "includes/sidebar.php";
                                         <td><?php echo $list_course->course_unit?></td>
                                         <td><?php echo $list_course->dept_title?></td>
                                         <td><?php echo $list_course->level?></td>
-                                        <td><a href="" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
+                                        <td><a href="includes/delete-course.php?course_id=<?php echo $list_course->course_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
                                     </tr>
                                 <?php }?>
                                 </tbody>

@@ -59,7 +59,7 @@ include "includes/sidebar.php";
                                         <td><?php echo $lect->lecturer_phone?></td>
                                         <td><?php echo $lect->dept_title?></td>
                                         <td><?php echo $lect->lecturer_level?></td>
-                                        <td><a href="delete_lecturer.php?l_id=<?php echo $lect->lecturer_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
+                                        <td><a href="includes/delete_lecturer.php?l_id=<?php echo $lect->lecturer_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
                                     </tr>
                                     <?php }
                                         ?>

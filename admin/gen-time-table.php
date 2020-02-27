@@ -170,7 +170,7 @@ include "includes/sidebar.php";
                                         <td><?php echo $sch->start_time.' | '.$sch->end_time?></td>
                                         <td><?php echo $sch->room_title?></td>
                                         <td><?php echo $sch->day_name?></td>
-                                        <td><a href="remove_schedule.php?id=<?php echo $sch->alloc_id?>" class="btn btn-success"><i class="fa fa-trash"></i> Remove</a></td>                                    </tr>
+                                        <td><a href="includes/remove_schedule.php?id=<?php echo $sch->alloc_id?>" class="btn btn-success"><i class="fa fa-trash"></i> Remove</a></td>                                    </tr>
                                 <?php }?>
                                 </tbody>
                             </table>

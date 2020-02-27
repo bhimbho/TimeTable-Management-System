@@ -88,7 +88,7 @@ include "includes/sidebar.php";
                                     <tr>
                                         <td><?php echo ++$count?></td>
                                         <td><?php echo $list_dept->dept_title?></td>
-                                        <td><a href="delete_dept.php?dept_id=<?php echo $list_dept->dept_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
+                                        <td><a href="includes/delete_dept.php?dept_id=<?php echo $list_dept->dept_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
                                     </tr>
                                     <?php 
                                         }?>

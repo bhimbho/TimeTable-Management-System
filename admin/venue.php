@@ -123,7 +123,7 @@ include "includes/footer.php";
                     $.each(obj, function() {
                         var room_id=this['room_id'];
                         var room_link=href="";
-                        result = result + "<tr><td>" + count++ +"</td><td>"+ this['room_title'] + "</td><td>" + this['capacity'] + "</td><td><a class='btn btn-danger' href=delete-room.php?room_id="+room_id+">Click Here</a> </td></tr>";
+                        result = result + "<tr><td>" + count++ +"</td><td>"+ this['room_title'] + "</td><td>" + this['capacity'] + "</td><td><a class='btn btn-danger' href=includes/delete-room.php?room_id="+room_id+">Delete Venue</a> </td></tr>";
                     });
                     result = result + "</tbody></table>";
                     $("#listhere").html(result);

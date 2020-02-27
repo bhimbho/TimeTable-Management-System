@@ -72,7 +72,7 @@ $student=new student();
 
 
         <footer class="footer footer-alt">
-            2020 &copy; Developed by <a href="" class="text-muted">AxiaPro Projetcs</a> 
+            2020 &copy; Developed by <a href="" class="text-muted">Me</a> 
         </footer>
 
         <!-- Vendor js -->

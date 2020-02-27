@@ -54,7 +54,12 @@ class db
 			}
 		// }
 	}
+	public static function redirect($param)
+    {
+      echo "<script>window.location.href='".$param."'</script>";
+    }
 }
+
 
 
 ?>

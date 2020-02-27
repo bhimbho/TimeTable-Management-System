@@ -21,7 +21,7 @@ class student extends db
     }
     public function list_student()
     {
-        $query=PARENT::p("SELECT * FROM `student` LEFT JOIN department ON student.student_dept=department.dept_id ORDER BY student_id DESC");
+        $query=PARENT::p("SELECT * FROM `student` LEFT JOIN department ON student.student_dept_id=department.dept_id ORDER BY student_id DESC");
         $query->execute();
         return $row=$query->fetchAll(PDO::FETCH_OBJ);
     }
@@ -51,8 +51,8 @@ class student extends db
     
     public function del_student($student_id)
     {
-        $query=PARENT::p("DELETE FROM `room` WHERE `room_id`=?");
-        return $query->execute([$session_id]);
+        $query=PARENT::p("DELETE FROM `student` WHERE `student_id`=?");
+        return $query->execute([$student_id]);
     }
 
     //--------------Semester Function-----------------

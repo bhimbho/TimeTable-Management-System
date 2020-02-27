@@ -40,8 +40,8 @@ class lecturer extends db
     
     public function del_lecturer($lecturer_id)
     {
-        $query=PARENT::p("DELETE FROM `room` WHERE `room_id`=?");
-        return $query->execute([$session_id]);
+        $query=PARENT::p("DELETE FROM `lecturer` WHERE `lecturer_id`=?");
+        return $query->execute([$lecturer_id]);
     }
 
     //--------------Semester Function-----------------

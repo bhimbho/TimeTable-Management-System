@@ -111,7 +111,7 @@ include "includes/sidebar.php";
                                         <td><?php echo $list_time->start_time?></td>
                                         <td><?php echo $list_time->end_time?></td>
                                         <td><?php echo $list_time->hours?></td>
-                                        <td><a href="delete_time.php?time_val=<?php echo $list_time->time_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
+                                        <td><a href="includes/delete_time.php?time_val=<?php echo $list_time->time_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
                                     </tr>
                                     <?php 
                                         }?>

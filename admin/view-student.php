@@ -55,10 +55,11 @@ include "includes/sidebar.php";
                                         <td><?php echo ++$count?></td>
                                         <td><?php echo $stu->student_matricno?></td>
                                         <td><?php echo $stu->student_lastname?></td>
+                                        <td><?php echo $stu->student_matricno?></td>
                                         <td><?php echo $stu->student_email?></td>
                                         <td><?php echo $stu->student_phone?></td>
                                         
-                                        <td><a href="delete_student.php?student_id=<?php echo $stu->student_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
+                                        <td><a href="includes/delete_student.php?student_id=<?php echo $stu->student_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
                                     </tr>
                                 <?php }?>
                                 </tbody>

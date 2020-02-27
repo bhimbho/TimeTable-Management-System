@@ -76,7 +76,7 @@ include "includes/sidebar.php";
                                     <tr>
                                         <th>S/N</th>
                                         <th>Level</th>
-                                        <th>Action</th>
+                                        <!-- <th>Action</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -87,7 +87,7 @@ include "includes/sidebar.php";
                                     <tr>
                                         <td><?php echo ++$count?></td>
                                         <td><?php echo $list_level->level?></td>
-                                        <td><a href="delet_level.php?level_id=<?php echo $list_level->level_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td>
+                                        <!-- <td><a href="delet_level.php?level_id=<?php echo $list_level->level_id?>" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a></td> -->
                                     </tr>
                                     <?php 
                                         }?>
