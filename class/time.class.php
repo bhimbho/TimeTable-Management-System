@@ -88,6 +88,31 @@ class time extends db
         $query=PARENT::p("DELETE FROM `alloc_slots` WHERE `alloc_id`=?");
         return $query->execute([$alloc_id]);
     }
+
+    public function schedule_checker($time,$day,$lecturer_id)
+    {
+        // echo $day=1;
+        // $time=2;
+        $query=PARENT::p("SELECT * from lecturer LEFT JOIN assigned_course ON lecturer.lecturer_id=assigned_course.lecturer_id LEFT JOIN course ON assigned_course.course_id=course.course_id LEFT JOIN alloc_slots ON assigned_course.course_id = `alloc_slots`.`course_id`
+        LEFT JOIN rooms ON alloc_slots.room_id = `rooms`.`room_id`
+         WHERE lecturer.lecturer_id=? AND day_id=? AND time_id=?");
+        $query->execute([$lecturer_id,$day,$time]);
+        return $query->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function get_day_id($day)
+    {
+        $query=PARENT::p("SELECT * from day WHERE day_name LIKE ?");
+        $query->execute(['%'.$day.'%']);
+        return $query->fetch(PDO::FETCH_OBJ)->day_id;
+    }
+
+    public function get_time_id($time)
+    {
+        $query=PARENT::p("SELECT * from time WHERE start_time LIKE ?");
+        $query->execute(['%'.$time.'%']);
+        return $query->fetch(PDO::FETCH_OBJ)->time_id;
+    }
     
 }
 
